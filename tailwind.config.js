@@ -11,6 +11,9 @@ module.exports = {
       "3xl": "1920px",
     },
     extend: {
+      colors: {
+        "main-black": "#222",
+      },
       fontFamily: {
         sans: [
           "Poppins",
