@@ -4,6 +4,7 @@
 
 body {
   @apply text-main-black text-lg leading-[1.4];
+  cursor: none !important;
 }
 
 p {
@@ -14,10 +15,18 @@ h1 {
   @apply text-[10.5vw] leading-[90%] font-black;
 }
 
+/* Custom cursor */
+#cursor {
+  @apply h-[25px] w-[25px] lg:hidden absolute top-[-300px] left-[-300px] z-10 rounded-full border border-black;
+  transition-duration: 50ms;
+  transition-timing-function: ease-out;
+  pointer-events: none;
+}
+
 /* Main navigation bar */
 
 #burger {
-  @apply flex flex-col justify-center items-end cursor-pointer;
+  @apply flex flex-col justify-center items-end;
 }
 
 .top {
@@ -67,5 +76,9 @@ h1 {
 
 .main-nav.menu-clicked .top,
 .main-nav.menu-clicked .bottom {
+  @apply border-white;
+}
+
+#cursor.menu-clicked {
   @apply border-white;
 }
