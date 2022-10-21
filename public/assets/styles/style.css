@@ -547,6 +547,11 @@ h1 {
   border-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  transition: width 0.5s;
+}
+
+#burger:hover .bottom {
+  width: 100%;
 }
 
 @media screen and (max-width: 991px) {

@@ -26,6 +26,11 @@ h1 {
 
 .bottom {
   @apply w-[56%] h-[2px] mt-[9px] border border-black;
+  transition: width 0.5s;
+}
+
+#burger:hover .bottom {
+  @apply w-full;
 }
 
 @media screen and (max-width: 991px) {
