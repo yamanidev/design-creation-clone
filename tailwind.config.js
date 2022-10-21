@@ -2,6 +2,14 @@
 module.exports = {
   content: ["public/index.html"],
   theme: {
+    screens: {
+      sm: { max: "479px" },
+      md: { max: "767px" },
+      lg: { max: "991px" },
+      xl: "1280px",
+      "2xl": "1440px",
+      "3xl": "1920px",
+    },
     extend: {
       fontFamily: {
         sans: [
