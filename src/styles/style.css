@@ -1,3 +1,66 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply text-main-black text-lg leading-[1.4];
+}
+
+p {
+  @apply leading-[140%] font-light;
+}
+
+h1 {
+  @apply text-[10.5vw] leading-[90%] font-black;
+}
+
+/* Main navigation bar */
+
+#burger {
+  @apply flex flex-col justify-center items-end cursor-pointer;
+}
+
+.top {
+  @apply w-9 h-[2px] border border-black;
+}
+
+.bottom {
+  @apply w-[56%] h-[2px] mt-[9px] border border-black;
+}
+
+@media screen and (max-width: 991px) {
+  .main-nav {
+    @apply px-[1.875rem];
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main-nav {
+    @apply p-6;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .main-nav {
+    @apply px-4;
+  }
+}
+
+/* Main menu */
+#main-menu {
+  @apply hidden fixed top-0 bottom-0 right-0 left-0 bg-main-black;
+}
+
+/* Main menu clicked */
+#main-menu.menu-clicked {
+  @apply block;
+}
+
+.main-nav.menu-clicked {
+  @apply text-white;
+}
+
+.main-nav.menu-clicked .top,
+.main-nav.menu-clicked .bottom {
+  @apply border-white;
+}
