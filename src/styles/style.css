@@ -4,7 +4,11 @@
 
 body {
   @apply text-main-black text-lg leading-[1.4];
-  cursor: none !important;
+  /* cursor: none !important; */
+}
+
+a {
+  @apply block;
 }
 
 p {
@@ -60,14 +64,116 @@ h1 {
   }
 }
 
+@media screen and (min-width: 1920px) {
+  .main-nav {
+    @apply py-[2.22vw] px-[6vw];
+  }
+}
+
 /* Main menu */
 #main-menu {
-  @apply hidden fixed top-0 bottom-0 right-0 left-0 bg-main-black;
+  @apply hidden fixed top-0 bottom-0 right-0 left-0 overflow-y-scroll bg-main-black;
+}
+
+.menu-links {
+  @apply pt-[15vw] pb-[10vw] flex flex-col justify-center;
+}
+
+@media screen and (max-width: 991px) {
+  .menu-links {
+    @apply pt-[20vw] pb-[12vw];
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu-links {
+    @apply pt-[15vw] pb-[10vw];
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .menu-links {
+    @apply h-[85vh] pt-[8vh] pb-0;
+  }
+}
+
+#main-menu .sm {
+  @apply ml-auto flex flex-col items-end gap-1 pr-[4.15vw] fixed top-[50%] right-0 text-sm font-medium text-white;
+}
+
+@media screen and (max-width: 991px) {
+  #main-menu .sm {
+    @apply pr-[1.875rem];
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #main-menu .sm {
+    @apply pr-6;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  #main-menu .container {
+    @apply flex-col;
+  }
+
+  #main-menu .sm {
+    @apply ml-0 pr-0 flex-row justify-center gap-8 static;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  #main-menu .sm {
+    @apply pr-[6vw] gap-2 text-[0.78vw];
+  }
+}
+
+.menu-link {
+  @apply my-[3.75rem] font-bold;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-link {
+    @apply my-10;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .menu-link {
+    @apply my-5;
+  }
+}
+
+.menu-link-number {
+  @apply mb-[1.3125rem] leading-[90%];
+}
+
+@media screen and (max-width: 479px) {
+  .menu-link-number {
+    @apply mb-2 text-[0.75rem];
+  }
+}
+
+.menu-link-title {
+  @apply text-[9vw] leading-[90%];
+}
+
+@media screen and (max-width: 991px) {
+  .menu-link-title {
+    @apply text-[12vw];
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .menu-link-title {
+    @apply text-[2rem];
+  }
 }
 
 /* Main menu clicked */
 #main-menu.menu-clicked {
-  @apply block;
+  @apply flex justify-center;
 }
 
 .main-nav.menu-clicked {
