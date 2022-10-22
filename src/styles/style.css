@@ -130,7 +130,13 @@ h1 {
 }
 
 .menu-link {
-  @apply my-[3.75rem] font-bold;
+  @apply max-w-3xl mx-auto my-[3.75rem] font-bold;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.6s;
+}
+
+.menu-link:hover {
+  @apply text-white;
 }
 
 @media screen and (max-width: 767px) {
