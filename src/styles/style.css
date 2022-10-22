@@ -4,7 +4,7 @@
 
 body {
   @apply text-main-black text-lg leading-[1.4];
-  /* cursor: none !important; */
+  cursor: none !important;
 }
 
 a {
@@ -16,7 +16,7 @@ p {
 }
 
 h1 {
-  @apply text-[10.5vw] leading-[90%] font-black;
+  @apply text-[10.5vw] leading-[90%] font-bold;
 }
 
 /* Custom cursor */
@@ -193,4 +193,134 @@ h1 {
 
 #cursor.menu-clicked {
   @apply border-white;
+}
+
+/* Hero */
+
+.hero-container {
+  @apply pt-20 pb-10 px-[8.33vw] flex flex-col gap-52;
+}
+
+@media screen and (max-width: 1470px) {
+  .hero-container {
+    @apply gap-64;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .hero-container {
+    @apply gap-72;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .hero-container {
+    @apply pt-28 pb-[3.75rem] px-[1.875rem] gap-0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero-container {
+    @apply px-6;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .hero-container {
+    @apply pb-[3.125rem] px-4;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero-container {
+    @apply px-[8.33vw];
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .hero-container {
+    @apply px-[12vw];
+  }
+}
+
+.hero-container h1 {
+  -webkit-text-stroke: 3px #222;
+}
+
+@media screen and (max-width: 991px) {
+  .hero-container h1 {
+    @apply text-[14vw];
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .hero-container h1 {
+    @apply text-[15vw] font-extrabold;
+    -webkit-text-stroke: 1px #222;
+  }
+}
+
+.hero-container .amp {
+  @apply text-[12vw];
+  -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 991px) {
+  .hero-container .amp {
+    @apply text-[15.5vw];
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .hero-container .amp {
+    @apply text-[17.5vw];
+  }
+}
+
+.hero-container p {
+  @apply max-w-md mt-[1.125rem] mb-7;
+}
+
+@media screen and (max-width: 991px) {
+  .hero-container p {
+    @apply max-w-[57vw];
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero-container p {
+    @apply max-w-none;
+  }
+}
+
+.hero-container .keywords {
+  @apply mt-8 flex items-center gap-5 text-sm font-semibold text-[rgba(34,34,34,0.6)];
+}
+
+@media screen and (max-width: 479px) {
+  .hero-container .keywords {
+    @apply gap-4;
+  }
+}
+
+.hero-container .keywords-circle {
+  @apply w-1 h-1 rounded-full bg-[rgba(34,34,34,0.6)];
+}
+
+@media screen and (max-width: 991px) {
+  .hero-container .keywords {
+    @apply mt-[3.75rem];
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .hero-container .keywords {
+    @apply mt-[3.125rem];
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .hero-container .keywords {
+    @apply text-[0.78vw];
+  }
 }
