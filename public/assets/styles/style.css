@@ -487,23 +487,14 @@ video {
     max-width: 1920px;
   }
 }
-.fixed {
-  position: fixed;
-}
 .relative {
   position: relative;
 }
-.right-0 {
-  right: 0px;
-}
-.left-0 {
-  left: 0px;
+.z-20 {
+  z-index: 20;
 }
 .z-10 {
   z-index: 10;
-}
-.z-20 {
-  z-index: 20;
 }
 .inline-block {
   display: inline-block;
@@ -529,14 +520,6 @@ video {
 .bg-main-black {
   --tw-bg-opacity: 1;
   background-color: rgb(34 34 34 / var(--tw-bg-opacity));
-}
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-.px-\[4\.15vw\] {
-  padding-left: 4.15vw;
-  padding-right: 4.15vw;
 }
 .py-\[0\.625rem\] {
   padding-top: 0.625rem;
@@ -618,6 +601,12 @@ h1 {
   pointer-events: none;
 }
 
+@media screen and (max-width: 991px) {
+  #cursor {
+    display: none;
+  }
+}
+
 /* Main navigation bar */
 
 #burger {
@@ -647,6 +636,17 @@ h1 {
 
 #burger:hover .bottom {
   width: 100%;
+}
+
+.main-nav {
+  position: fixed;
+  right: 0px;
+  left: 0px;
+  z-index: 50;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  padding-left: 4.15vw;
+  padding-right: 4.15vw;
 }
 
 @media screen and (max-width: 991px) {
@@ -685,6 +685,7 @@ h1 {
   bottom: 0px;
   right: 0px;
   left: 0px;
+  z-index: 40;
   display: none;
   overflow-y: scroll;
   --tw-bg-opacity: 1;

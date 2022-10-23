@@ -27,6 +27,12 @@ h1 {
   pointer-events: none;
 }
 
+@media screen and (max-width: 991px) {
+  #cursor {
+    @apply hidden;
+  }
+}
+
 /* Main navigation bar */
 
 #burger {
@@ -44,6 +50,10 @@ h1 {
 
 #burger:hover .bottom {
   @apply w-full;
+}
+
+.main-nav {
+  @apply py-10 px-[4.15vw] fixed right-0 left-0 z-50;
 }
 
 @media screen and (max-width: 991px) {
@@ -72,7 +82,7 @@ h1 {
 
 /* Main menu */
 #main-menu {
-  @apply hidden fixed top-0 bottom-0 right-0 left-0 overflow-y-scroll bg-main-black;
+  @apply hidden fixed top-0 bottom-0 right-0 left-0 z-40 overflow-y-scroll bg-main-black;
 }
 
 .menu-links {
