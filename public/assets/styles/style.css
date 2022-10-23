@@ -558,7 +558,7 @@ body {
   line-height: 1.4;
   --tw-text-opacity: 1;
   color: rgb(34 34 34 / var(--tw-text-opacity));
-  /* cursor: none !important; */
+  cursor: none !important;
 }
 
 a {
