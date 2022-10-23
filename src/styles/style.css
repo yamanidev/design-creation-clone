@@ -4,7 +4,7 @@
 
 body {
   @apply text-main-black text-lg leading-[1.4];
-  cursor: none !important;
+  /* cursor: none !important; */
 }
 
 a {
@@ -260,6 +260,12 @@ h1 {
   }
 }
 
+@media screen and (min-width: 1920px) {
+  .hero-container h1 {
+    @apply text-[10vw];
+  }
+}
+
 .hero-container .amp {
   @apply text-[12vw];
   -webkit-text-fill-color: transparent;
@@ -294,7 +300,7 @@ h1 {
 }
 
 .hero-container .keywords {
-  @apply mt-8 flex items-center gap-5 text-sm font-semibold text-[rgba(34,34,34,0.6)];
+  @apply mt-8 flex items-center gap-5 relative z-10 text-sm font-semibold text-[rgba(34,34,34,0.6)];
 }
 
 @media screen and (max-width: 479px) {
@@ -322,5 +328,80 @@ h1 {
 @media screen and (min-width: 1920px) {
   .hero-container .keywords {
     @apply text-[0.78vw];
+  }
+}
+
+.hero-img-container {
+  @apply w-[51vw] h-[55vh] absolute bottom-0 right-0 bg-[#f5f5f5];
+}
+
+@media screen and (max-width: 991px) {
+  .hero-img-container {
+    @apply w-[41vw] h-[58%];
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .hero-img-container {
+    @apply w-[52vw] h-[52%];
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero-img-container {
+    @apply w-[51vw] h-[58vh];
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .hero-img-container {
+    @apply w-[47vw];
+  }
+}
+
+.hero-img-container img {
+  @apply h-[125vh] max-w-none absolute bottom-0 z-30;
+}
+
+@media screen and (max-width: 1440px) {
+  .hero-img-container img {
+    @apply -left-[10%];
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .hero-img-container img {
+    @apply -left-[15%];
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .hero-img-container img {
+    @apply h-[222%] max-w-none left-[10%];
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero-img-container img {
+    @apply h-[210%] opacity-50 -left-[10%];
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .hero-img-container img {
+    @apply h-[220%] -left-[10%];
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero-img-container img {
+    @apply h-[119vh] absolute bottom-0 z-30;
+    transform: translate(-3%, 0);
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .hero-img-container img {
+    transform: translate(-5%, 0);
   }
 }
